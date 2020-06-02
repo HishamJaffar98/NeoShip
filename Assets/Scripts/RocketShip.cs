@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RocketShip : MonoBehaviour
 {
@@ -10,30 +11,55 @@ public class RocketShip : MonoBehaviour
     [Header("Movement Speeds")]
     [SerializeField] float rotationSpeed = 100f;
     [SerializeField] float thrustSpeed = 100f;
+
+    int currentBuildIndex;
+    enum State {Alive, Dead};
+    State state;
     void Start()
     {
         rigidBody = GetComponent<Rigidbody>();
         audioSource = GetComponent<AudioSource>();
+        state = State.Alive;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Rotate();
-        Thrust();
+        currentBuildIndex = SceneManager.GetActiveScene().buildIndex;
+        if(state==State.Alive)
+        {
+            Rotate();
+            Thrust();
+        }
     }
 
     void OnCollisionEnter(Collision otherCollision)
     {
+        if(state==State.Dead) {return;}
+
         switch(otherCollision.gameObject.tag)
         {
             case "Friendly":
-                print("Ok");
+                break;
+            case "Finish":
+                Invoke("LoadNextLevel", 1.5f) ;
                 break;
             default:
-                print("Die");
+                state = State.Dead;
+                print("Dead");
+                Invoke("RestartLevel",2f);
                 break;
         }
+    }
+
+    private void RestartLevel()
+    {
+        SceneManager.LoadScene(currentBuildIndex);
+    }
+
+    private void LoadNextLevel()
+    {
+        SceneManager.LoadScene(currentBuildIndex + 1);
     }
 
     private void Rotate()
