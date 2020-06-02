@@ -128,6 +128,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 113845125, guid: b51dd519b898964489e7181c1386a7da, type: 3}
+      propertyPath: engineSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 9c8db85455127b346ab151ad33b9ebf2, type: 3}
+    - target: {fileID: 4424131035823878228, guid: b51dd519b898964489e7181c1386a7da,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 5474335104880471900, guid: b51dd519b898964489e7181c1386a7da,
         type: 3}
       propertyPath: m_Name
@@ -186,6 +195,16 @@ PrefabInstance:
     - target: {fileID: 5474335104880471901, guid: b51dd519b898964489e7181c1386a7da,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8269578981636506737, guid: b51dd519b898964489e7181c1386a7da,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9c8db85455127b346ab151ad33b9ebf2, type: 3}
+    - target: {fileID: 8269578981636506737, guid: b51dd519b898964489e7181c1386a7da,
+        type: 3}
+      propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
