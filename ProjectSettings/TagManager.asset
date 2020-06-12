@@ -5,6 +5,13 @@ TagManager:
   serializedVersion: 2
   tags:
   - Friendly
+  - Fuel
+  - Rocket
+  - RocketParts
+  - Saphire
+  - Ruby
+  - Emerald
+  - Amber
   layers:
   - Default
   - TransparentFX
