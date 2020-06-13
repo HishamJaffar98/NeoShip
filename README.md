@@ -50,7 +50,7 @@ To run the game using the WebGL build :-
 
 # Instructions and Controls
 ***
-Fly around in this neon-esque world while trying to collect various pickups to either maintain fuel levels or increase the amount of currency, to then spend it within the upgrade store.
+Fly around in different neon-esque levels to ultimately land on the green landing pad, while trying to avoid obstacles and collect gems and fuel cans to help upgrade your ship and maintain your fuel levels respectively. 
 
 Controls:-
 - Use the `Mouse` to navigate through UI menus (*Start Menu, Upgrade Store and Pause Menu*) 
