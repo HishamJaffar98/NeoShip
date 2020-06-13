@@ -1,6 +1,6 @@
 # NeoShip
 ***
-A 3D ambient flying game where you venture in a blocky world while listening to lofi house music.
+A 3D ambient flying game where you venture in a blocky world while listening to lofi house music, with an emphasis on particle systems. Built using C# for Unity. Particle systems within the game were built using Shuriken particle system as well as the VFX Graph.
 
 # Project Structure
 ***
